@@ -3,6 +3,10 @@ onmessage = function (e) {
     let ImagesToCache = new Array();
     let data = e.data;
 
+    const request = async (url) => {
+        const response = await fetch(url);
+    }
+
     data.forEach((obj) => {
         /* Apply each images and ensure no duplicates. */
         obj.img.forEach((file) => {
@@ -14,13 +18,11 @@ onmessage = function (e) {
 
     ImagesToCache.forEach(function (url, i) {
 
-        fetch("../../" + url)
-            .then(function (response) {
-
-            }).catch(function () {
-
-            });
+        request(url);
     });
+
+
+
 
     console.log("ImagesToCache=" + ImagesToCache)
     /*   if (isNaN(result)) {
