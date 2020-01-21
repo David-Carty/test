@@ -1,0 +1,51 @@
+components.json - json file format
+
+Irrespective of how many versions of a component are available, each website contains a single
+version that was the latest version when the site was created. This ensures stability and reduces the complexity of maintaining multiple versions of each component on a site.
+Furthermore, it ensure that the master components remain unmodified by site users.
+
+The design IDE needs to construct its toolbar based on the components that are available in this particular web or solution.
+Furthermore the code editor needs access to the methods of each components
+Finally, default properties for each component need to be known so that the properties window can be constructed and user specified
+properties can be captured.
+
+Array of available components:
+
+component
+version
+methods
+properties
+defaults {"name":"","val":"","description":"","captureType":""}
+
+captureType: This is the type of control that should be displayed to capture the property.  It could be:
+a string input box,
+a numeric input box,
+a colorpicker, 
+an image picker,
+a video picker,
+a boolean (checkbox)
+
+Once the defaults have been captured they must be saved for the particular instance of the component.
+
+These must be saved in the view folder that the component is on.  As there could be multiple instances of the
+same component on a single view then we must save by component id.
+
+The logic is as follows:
+
+Every component that is added is recorded in the views componentList.json.  Initially, the default values will appear in the component capture panel if they are later changed then the changed values will appear in the capture panel.
+
+So, when an instance of a component is added to a view:
+
+1. the component's tag appears in the views .html document. (This is the one that appears in the editor, HTML appear to the public.
+2. It's HTML is embedded in the views .htm document.
+3. The component.json contain an inventory of all components in the project.
+4. The default parameters for this component are copied over to the views componentList.json file.
+5. Should the user update the component by changing any of the default settings in the component default panel then the views componentList.json will be modified to reflect these changes. 
+
+So whilst the inventory of components (components/components.json) is important to the full application. the views component list (views/[viewname]/componentList.json) is required for maintaining the data of every component instance.
+A component instance is distinguished from all other component instances by it's componentId + viewName (as it is not possible to have two components existing on a view with the same id)
+
+The views component list (views/[viewname]/componentList.json) is then used in design preview and on the public site to initialise the view with the correct values.  Component instances must be initialised in json as only one js module exists per components so that module
+must contain its original defaults.
+
+

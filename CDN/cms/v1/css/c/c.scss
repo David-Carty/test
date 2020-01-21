@@ -1,0 +1,15 @@
+/*css that is used exclusively by the full cms solution.*/
+$cms-bg: #f5f5f5;
+#s_wrapper {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 32px 1fr 32px;
+
+  nav {
+    background: $cms-bg;
+  }
+
+  footer {
+    background: $cms-bg;
+  }
+}

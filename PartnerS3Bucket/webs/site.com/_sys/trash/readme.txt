@@ -1,0 +1,1 @@
+Trash files will appear in a dialog that the user can bring back into their project.  This directory is never seen.

@@ -1,0 +1,1 @@
+/* This offers different types of synopsys. */

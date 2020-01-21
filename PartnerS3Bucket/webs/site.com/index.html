@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="stylesheet" href="https://s3.eu-west-2.amazonaws.com/www.tymz.co.uk/perf/CDN/cms/v1/css/common/main.css">
+    <link rel="stylesheet" href="https://s3.eu-west-2.amazonaws.com/www.tymz.co.uk/perf/CDN/cms/v1/css/typography/web/material.css">
+    <link rel="stylesheet" href="https://s3.eu-west-2.amazonaws.com/www.tymz.co.uk/perf/CDN/cms/v1/css/themes/bg-graph.css">
+    <link rel="stylesheet" href="app/index/index.css">
+
+    <!--CSS of the view and its components below -->
+    <link rel="stylesheet" href="components/searchbox/searchbox.css">
+    <link rel="stylesheet" href="components/listbox/listbox.css">
+    <link rel="stylesheet" href="views/home/home.css">
+    <!--CSS of the view and its components above -->
+</head>
+
+<body class="material-type bg-graph">
+
+    <!--Holds the preloaded html. This is added when the outer is saved in design, reducing milliseconds at runtime. MUST BE IN EVERY OUTER, so automatically added on save.-->
+    <div class="app">
+        <header>
+            <button id="btnHome" class="button">Home</button>
+            <button id="btnAbout" class="button">About</button>
+            <button id="btnTerms" class="button">Terms</button>
+            <button id="btnOverlay" class="button">Overlay</button>
+            <button id="btnModal" class="button">Modal</button>
+            <div id="perf"></div>
+        </header>
+        <main id="site_main">
+            <div id="_v_home">
+                hello
+                <div id="_home_911_loaded"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://s3.eu-west-2.amazonaws.com/www.tymz.co.uk/perf/CDN/cms/v1/libs/loader.js"></script>
+    <script src="https://s3.eu-west-2.amazonaws.com/www.tymz.co.uk/perf/CDN/cms/v1/js/utils.min.js"></script>
+    <script src="https://s3.eu-west-2.amazonaws.com/www.tymz.co.uk/perf/CDN/cms/v1/js/runtime.min.js"></script>
+    <script src="https://s3.eu-west-2.amazonaws.com/www.tymz.co.uk/perf/CDN/cms/v1/js/init.min.js"></script>
+    <script src="https://s3.eu-west-2.amazonaws.com/www.tymz.co.uk/perf/PartnerS3Bucket/webs/site.com/_sys/system/view_conf.js"></script>
+    <script src="https://s3.eu-west-2.amazonaws.com/www.tymz.co.uk/perf/PartnerS3Bucket/webs/site.com/_sys/system/img_cache.js"></script>
+
+    <!--JS of the view and its components below -->
+    <script src="views/home/home.min.js"></script>
+    <script src="components/searchbox/searchbox.min.js"></script>
+    <script src="components/listbox/listbox.min.js"></script>
+    <!--JS of the view and its components above -->
+
+
+    <script src="app/index/index.min.js"></script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,17 @@
+This is a json format file that stores the definition of the component that is created in the UI.
+The json tree contains:
+
+"name":
+"version":
+"description":
+"dateCreated":
+"lastEdited":
+params{
+    {"name": "", "default": "", "description"},
+    ...}	
+methods{
+    {"name": "", "type", "arguements": "", "description"},
+    ...}
+	
+This format is available to both the creator of the component and end user as the end user may wish to add a method to the component without impacting the original component as a copy of the component is made to the site's component folder.
+	

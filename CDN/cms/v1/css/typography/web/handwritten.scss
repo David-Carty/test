@@ -1,0 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Just+Another+Hand);
+@import "mixins";
+
+.hand-type {
+  font-family: "Just Another Hand", cursive;
+  @include mobileFont(18, 1.35);
+  @media screen and (min-width: 968px) {
+    @include desktopFont(1.4, 1.4);
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: "Just Another Hand", cursive;
+  }
+}

@@ -1,0 +1,64 @@
+@import url(https://fonts.googleapis.com/css?family=Boogaloo);
+.informal-type {
+  font-family: 'Boogaloo', cursive;
+  font-size: calc(18px + (26 - 18) * ((100vw - 300px) / (1600 - 300)));
+  line-height: 1.35;
+  /* padding: 0 2em; */
+  text-align: left;
+}
+
+.informal-type h1,
+.informal-type h2,
+.informal-type h3 {
+  margin-bottom: calc((1.5rem - 2rem) + 1.5rem);
+}
+
+.informal-type .subheading {
+  margin-top: calc((0.5rem - 2rem) + 0.5rem);
+}
+
+.informal-type .center {
+  text-align: center;
+}
+
+.informal-type .centerH1 h1 {
+  text-align: center;
+}
+
+.informal-type .centerH1-H2 h1,
+.informal-type .centerH1-H2 h2 {
+  text-align: center;
+}
+
+.informal-type .leftH1 h1 {
+  text-align: left;
+}
+
+.informal-type .leftH1-H2 h1,
+.informal-type .leftH1-H2 h2 {
+  text-align: left;
+}
+
+@supports (not (initial-letter: 5)) and (not (-webkit-initial-letter: 5)) {
+  .informal-type .dropcaps::first-letter {
+    font-size: calc(54px + ((26 * 3) - 54) * ((100vw - 300px) / (1600 - 300)));
+    float: left;
+    line-height: 0.675;
+    margin: 0.12em 0.05em 0 0;
+  }
+}
+
+@supports (initial-letter: 5) or (-webkit-initial-letter: 5) {
+  .informal-type .dropcaps:nth-of-type(1)::first-letter {
+    -webkit-initial-letter: 2;
+    initial-letter: 2;
+    color: blue;
+  }
+}
+
+@media screen and (min-width: 968px) {
+  .informal-type {
+    font-size: "1.4rem";
+    line-height: 1.4;
+  }
+}

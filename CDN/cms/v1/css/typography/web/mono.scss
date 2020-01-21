@@ -1,0 +1,13 @@
+
+
+@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Sans);
+@import 'mixins';
+
+
+.mono-type{
+    font-family: 'IBM Plex Sans', sans-serif;
+    @include mobileFont(18,1.35);
+    @media screen and (min-width: 968px) {
+        @include desktopFont(1.4,1.4); 
+    }
+}

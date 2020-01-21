@@ -1,0 +1,1 @@
+let s_app_config = '{"aboutusimg":"","version":"1.0", "mode":"","vocabcms":"","vocabeditor":""}';

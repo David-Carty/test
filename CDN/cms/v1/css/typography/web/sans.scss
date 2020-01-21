@@ -1,0 +1,11 @@
+@import 'mixins';
+
+.sans-type{
+    font-family: Cambria,"Times New Roman",Times,serif;
+   
+    @include mobileFont(18,1.35);
+    @media screen and (min-width: 968px) {
+        @include desktopFont(1.4,1.4); 
+    }
+}
+

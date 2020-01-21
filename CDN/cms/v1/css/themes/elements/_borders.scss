@@ -1,0 +1,10 @@
+@mixin borders($borderStyle) {
+  width: 98%;
+  max-width: 1200px;
+  height: auto;
+  @media (min-width: 962px) {
+    margin: 30px auto 30px auto;
+    padding: 10px 40px 10px 40px;
+    width: 90%;
+  }
+}

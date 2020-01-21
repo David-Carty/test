@@ -1,0 +1,1 @@
+v -stands for voice.  Voice could have things like waves indicators in it.

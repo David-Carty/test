@@ -1,0 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Boogaloo);
+@import 'mixins';
+
+.informal-type{
+    font-family: 'Boogaloo', cursive;
+    @include mobileFont(18,1.35);
+    @media screen and (min-width: 968px) {
+        @include desktopFont(1.4,1.4); 
+    }
+
+}

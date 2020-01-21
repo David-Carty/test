@@ -1,0 +1,74 @@
+@mixin mobileFont($fontSize, $lineHeight) {
+  $size: $fontSize + "px";
+  $fontSize3: $fontSize * 3;
+  $fontSize3_px: $fontSize3 + "px";
+  font-size: calc(#{$size} + (26 - #{$fontSize}) * ((100vw - 300px) / (1600 - 300)));
+  $cap-size: calc(#{$fontSize3_px} + ((26 * 3) - #{$fontSize3}) * ((100vw - 300px) / (1600 - 300)));
+  line-height: $lineHeight;
+  /* padding: 0 2em; */
+  text-align: left;
+  h1,
+  h2,
+  h3 {
+    margin-bottom: calc((1.5rem - 2rem) + 1.5rem);
+  }
+
+  .subheading {
+    margin-top: calc((0.5rem - 2rem) + 0.5rem);
+  }
+
+  .center {
+    text-align: center;
+  }
+  .centerH1 {
+    h1 {
+      text-align: center;
+    }
+  }
+
+  .centerH1-H2 {
+    h1,
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .leftH1 {
+    h1 {
+      text-align: left;
+    }
+  }
+
+  .leftH1-H2 {
+    h1,
+    h2 {
+      text-align: left;
+    }
+  }
+
+  //Dropcaps below
+  // Wrap in @supports with `not` operator
+  @supports (not (initial-letter: 5)) and (not (-webkit-initial-letter: 5)) {
+    .dropcaps::first-letter {
+      font-size: $cap-size;
+      float: left;
+      line-height: 0.675;
+      margin: 0.12em 0.05em 0 0;
+    }
+  }
+
+  // Progressive enhancements for supported browsers
+  @supports (initial-letter: 5) or (-webkit-initial-letter: 5) {
+    .dropcaps:nth-of-type(1)::first-letter {
+      -webkit-initial-letter: 2;
+      initial-letter: 2;
+      color: blue;
+    }
+  }
+}
+
+//Dropcaps above
+@mixin desktopFont($fontSize, $lineHeight) {
+  font-size: $fontSize + "rem";
+  line-height: $lineHeight;
+}

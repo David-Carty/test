@@ -1,0 +1,11 @@
+.overview_sans {
+  font-family: Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif;
+  padding: 0.2em 1em 0.2em;
+  margin: 1rem 0;
+}
+
+.overview_sans h2 {
+  text-align: left !important;
+  font-style: italic;
+  margin-top: 0 !important;
+}

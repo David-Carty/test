@@ -1,0 +1,24 @@
+{
+    "id": "v_home",
+    "name": "home",
+    "outer": "site",
+    "containerId": "site_main",
+    "effect": "none",
+    "preloadView": false,
+    "preloadElId": null,
+    "mask": "none",
+    "html": null,
+    "inst": null,
+    "obj": null,
+    "css": [
+        "views/home/home.css",
+        "components/searchbox/searchbox.css",
+        "components/listbox/listbox.css"
+    ],
+    "js": [
+        "views/home/home.min.js",
+        "components/searchbox/searchbox.min.js",
+        "components/listbox/listbox.min.js",
+        "https://github.com/material-motion/material-motion-js"
+    ]
+}
