@@ -18,7 +18,7 @@ onmessage = function (e) {
 
     ImagesToCache.forEach(function (url, i) {
 
-        request(url);
+        request("../../" + url);
     });
 
 
