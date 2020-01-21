@@ -8,6 +8,8 @@ onmessage = function (e) {
         const response = await fetch(url);
     }
 
+    request("../../views/about/about.html"); /*Needs sorting !!!!!!!!!!!!!! */
+
     data.forEach((obj) => {
         if (obj.preloadView) {
 
