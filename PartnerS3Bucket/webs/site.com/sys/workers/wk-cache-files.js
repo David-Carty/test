@@ -14,7 +14,7 @@ onmessage = function (e) {
             obj.css.forEach((file) => {
                 if (CSSFilesToCache.indexOf(file) == -1) {
                     CSSFilesToCache.push(file);
-                    request(file);
+                    request("../../" + file);
                 }
             });
             obj.js.forEach((file) => {
@@ -22,7 +22,7 @@ onmessage = function (e) {
 
                 if (JSFilesToCache.indexOf(file) == -1) {
                     JSFilesToCache.push(file);
-                    request(file);
+                    request("../../" + file);
 
                 }
             });
