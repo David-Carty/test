@@ -9,7 +9,7 @@ onmessage = function (e) {
             obj.css.forEach((file) => {
                 if (CSSFilesToCache.indexOf(file) == -1) {
                     CSSFilesToCache.push(file);
-                    fetch("../../" + file)
+                    fetch(file)
                         .then(function (response) {
 
                         }).catch(function () {
@@ -20,7 +20,7 @@ onmessage = function (e) {
             obj.js.forEach((file) => {
                 if (JSFilesToCache.indexOf(file) == -1) {
                     JSFilesToCache.push(file);
-                    fetch("../../" + file)
+                    fetch(file)
                         .then(function (response) {
 
                         }).catch(function () {
