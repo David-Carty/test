@@ -1,1 +1,1 @@
-s_rt._loadImgConfig(JSON.parse('[{"name":"about","img": ["assets/012.jpg","assets/001.jpg","assets/002.jpg","assets/003.jpg","assets/004.jpg","assets/005.jpg","assets/006.jpg","assets/007.jpg","assets/008.jpg","assets/009.jpg","assets/010.jpg"]},{"name":"terms","img": ["assets/011.jpg","assets/012.jpg","assets/013.jpg","assets/014.jpg","assets/015.jpg","assets/016.jpg","assets/017.jpg","assets/018.jpg","assets/019.jpg","assets/020.jpg"]}]'));
+s_rt._loadImgConfig(JSON.parse('[{"name":"about","img": ["assets/001.jpg","assets/002.jpg"]}]'));
