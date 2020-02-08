@@ -35,6 +35,10 @@
         </header>
         <main id="site_main">
             <div id="_v_home">
+                
+                                <p><button class="js-click-test-button button">Click Speed</button> <span
+                        class="js-click-test-results click-test-results"></span></p>
+                
                 hello<br />
                 hello<br />
                 hello<br />
@@ -202,7 +206,39 @@
             </div>
         </main>
     </div>
+    <script>
+    const clickTestButton = document.querySelector('.js-click-test-button')
+const clickTestResultsElement = document.querySelector('.js-click-test-results')
+let start
+let lastTouchTimestamp = -1000
 
+function hasBeenTouched() {
+    return !(performance.now() - lastTouchTimestamp > 1000)
+}
+if (clickTestButton) {
+    clickTestButton.addEventListener('touchstart', () => {
+        start = performance.now()
+        lastTouchTimestamp = start
+    })
+
+    clickTestButton.addEventListener('mouseover', () => {
+        if (!hasBeenTouched()) {
+            start = performance.now()
+        }
+    })
+
+    clickTestButton.addEventListener('click', () => {
+        if (!start) {
+            clickTestResultsElement.innerHTML = 'Un-hover before clicking again.'
+        }
+        else {
+            clickTestResultsElement.innerHTML = '<strong class="click-test-results__delay">' + Math.round(performance.now() - start) + '&nbsp;ms</strong> from ' + (hasBeenTouched() ? 'touchstart' : 'hover') + ' to click.'
+            start = undefined
+        }
+    })
+}
+    
+    </script>
     <script src="CDN/cms/v1/libs/loader.js"></script>
     <script src="CDN/cms/v1/js/utils.min.js"></script>
     <script src="CDN/cms/v1/js/runtime.min.js"></script>
